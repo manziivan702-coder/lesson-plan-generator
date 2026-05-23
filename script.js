@@ -124,4 +124,14 @@ Learners: ${learners}
 `;
 
   document.getElementById("output").innerText = output;
+}function downloadPDF() {
+  const { jsPDF } = window.jspdf;
+
+  let doc = new jsPDF();
+
+  let content = document.getElementById("output").innerText;
+
+  doc.text(content, 10, 10);
+
+  doc.save("lesson-plan.pdf");
 }
