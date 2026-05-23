@@ -325,79 +325,63 @@ function goStep(index) {
     opt.textContent = l;
     lesson.appendChild(opt);
   });
-}function generate() {
-  let school = document.getElementById("school").value;
-  let teacher = document.getElementById("teacher").value;
-  let level = document.getElementById("level").value;
-  let subject = document.getElementById("subject").value;
-  let unit = document.getElementById("unit").value;
-  let lesson = document.getElementById("lesson").value;
-  let learners = document.getElementById("learners").value;
-  let strategy = document.getElementById("strategy").value;
+}let output = `
+====================================
+📘 REB CBC LESSON PLAN
+====================================
 
-  let objectives = `
-OBJECTIVES:
-- By the end of the lesson, learners should understand ${lesson}
+🏫 School: ${school}
+👨‍🏫 Teacher: ${teacher}
+📚 Level: ${level}
+📖 Subject: ${subject}
+
+📦 Unit: ${unit}
+📘 Lesson: ${lesson}
+
+👩‍🎓 Number of Learners: ${learners}
+🧠 Teaching Strategy: ${strategy}
+
+------------------------------------
+🎯 1. LESSON OBJECTIVES
+------------------------------------
+- By the end of the lesson, learners should be able to understand ${lesson}
 - Demonstrate knowledge of ${unit}
-- Apply concepts in real life situations
-`;
+- Apply learned concepts in daily life situations
 
-  let teacherActivities = `
-TEACHER ACTIVITIES:
-- Introduces the lesson topic: ${lesson}
-- Explains key concepts in ${subject}
+------------------------------------
+🧑‍🏫 2. TEACHING & LEARNING ACTIVITIES
+------------------------------------
+Teacher:
+- Introduces the lesson clearly
+- Explains key concepts of ${subject}
 - Guides learners using ${strategy}
-`;
+- Gives examples and clarification
 
-  let learnerActivities = `
-LEARNER ACTIVITIES:
-- Participate in discussion
-- Work in groups
-- Answer questions
-- Practice exercises
-`;
+Learners:
+- Participate actively in class activities
+- Work in groups and pairs
+- Answer teacher questions
+- Practice exercises given
 
-  let assessment = `
-ASSESSMENT:
-- Oral questions
+------------------------------------
+🧪 3. ASSESSMENT
+------------------------------------
+- Oral questioning
 - Written exercises
-- Group presentation
-`;
+- Group presentations
+- Short quizzes
 
-  let competences = `
-COMPETENCES:
+------------------------------------
+📌 4. COMPETENCES DEVELOPED
+------------------------------------
 - Critical thinking
 - Communication
-- Cooperation
+- Collaboration
 - Problem solving
+- Creativity & innovation
+
+------------------------------------
+📍 5. LESSON SUMMARY
+------------------------------------
+This lesson on ${lesson} helps learners build strong understanding of ${unit} in ${subject}.
 `;
-
-  let output = `
-========================
-REB CBC LESSON PLAN
-========================
-
-School: ${school}
-Teacher: ${teacher}
-Level: ${level}
-Subject: ${subject}
-Unit: ${unit}
-Lesson: ${lesson}
-
-Learners: ${learners}
-Strategy: ${strategy}
-
-------------------------
-${objectives}
-------------------------
-${teacherActivities}
-------------------------
-${learnerActivities}
-------------------------
-${assessment}
-------------------------
-${competences}
-`;
-
-  document.getElementById("output").innerText = output;
-}
