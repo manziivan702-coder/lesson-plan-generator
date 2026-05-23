@@ -325,4 +325,79 @@ function goStep(index) {
     opt.textContent = l;
     lesson.appendChild(opt);
   });
+}function generate() {
+  let school = document.getElementById("school").value;
+  let teacher = document.getElementById("teacher").value;
+  let level = document.getElementById("level").value;
+  let subject = document.getElementById("subject").value;
+  let unit = document.getElementById("unit").value;
+  let lesson = document.getElementById("lesson").value;
+  let learners = document.getElementById("learners").value;
+  let strategy = document.getElementById("strategy").value;
+
+  let objectives = `
+OBJECTIVES:
+- By the end of the lesson, learners should understand ${lesson}
+- Demonstrate knowledge of ${unit}
+- Apply concepts in real life situations
+`;
+
+  let teacherActivities = `
+TEACHER ACTIVITIES:
+- Introduces the lesson topic: ${lesson}
+- Explains key concepts in ${subject}
+- Guides learners using ${strategy}
+`;
+
+  let learnerActivities = `
+LEARNER ACTIVITIES:
+- Participate in discussion
+- Work in groups
+- Answer questions
+- Practice exercises
+`;
+
+  let assessment = `
+ASSESSMENT:
+- Oral questions
+- Written exercises
+- Group presentation
+`;
+
+  let competences = `
+COMPETENCES:
+- Critical thinking
+- Communication
+- Cooperation
+- Problem solving
+`;
+
+  let output = `
+========================
+REB CBC LESSON PLAN
+========================
+
+School: ${school}
+Teacher: ${teacher}
+Level: ${level}
+Subject: ${subject}
+Unit: ${unit}
+Lesson: ${lesson}
+
+Learners: ${learners}
+Strategy: ${strategy}
+
+------------------------
+${objectives}
+------------------------
+${teacherActivities}
+------------------------
+${learnerActivities}
+------------------------
+${assessment}
+------------------------
+${competences}
+`;
+
+  document.getElementById("output").innerText = output;
 }
