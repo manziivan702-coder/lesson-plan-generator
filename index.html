@@ -2,9 +2,137 @@
 <html>
 <head>
   <title>REB CBC Planner</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      display: flex;
+      height: 100vh;
+      background: #f4f7fb;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: #003366;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .step-btn {
+      padding: 12px;
+      margin-bottom: 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .step-btn.active {
+      background: #0055aa;
+    }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+      background: white;
+    }
+
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  </style>
 </head>
+
 <body>
 
+<div class="sidebar">
+  <h2>📘 REB CBC</h2>
+
+  <div class="step-btn active" onclick="goStep(0)">1. Basic Info</div>
+  <div class="step-btn" onclick="goStep(1)">2. Academic</div>
+  <div class="step-btn" onclick="goStep(2)">3. Unit & Lesson</div>
+  <div class="step-btn" onclick="goStep(3)">4. Class Info</div>
+  <div class="step-btn" onclick="goStep(4)">5. Strategy</div>
+  <div class="step-btn" onclick="goStep(5)">6. Output</div>
+</div>
+
+<div class="content">
+
+  <!-- STEP 1 -->
+  <div class="step active">
+    <h3>Basic Info</h3>
+    <input placeholder="School Name">
+    <input placeholder="Teacher Name">
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <h3>Academic Info</h3>
+    <select>
+      <option>Lower Primary</option>
+      <option>Upper Primary</option>
+      <option>O-Level</option>
+    </select>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <h3>Unit & Lesson</h3>
+    <input placeholder="Unit Number">
+    <input placeholder="Lesson Number">
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <h3>Class Info</h3>
+    <input placeholder="Number of learners">
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step">
+    <h3>Strategy</h3>
+    <select>
+      <option>Group Work</option>
+      <option>Discussion</option>
+      <option>Role Play</option>
+    </select>
+  </div>
+
+  <!-- STEP 6 -->
+  <div class="step">
+    <h3>Output</h3>
+    <button>Generate Lesson Plan</button>
+    <button>Download PDF</button>
+  </div>
+
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
