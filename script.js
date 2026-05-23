@@ -292,4 +292,20 @@ function goStep(index) {
   });
 
   loadUnits();
+}function loadUnits() {
+  let level = document.getElementById("level").value;
+  let subject = document.getElementById("subject").value;
+
+  let unit = document.getElementById("unit");
+  unit.innerHTML = "";
+
+  if (!curriculum[level]?.[subject]) return;
+
+  Object.keys(curriculum[level][subject]).forEach(u => {
+    let opt = document.createElement("option");
+    opt.textContent = u;
+    unit.appendChild(opt);
+  });
+
+  loadLessons();
 }
