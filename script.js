@@ -259,4 +259,24 @@ function goStep(index) {
   });
 
   currentStep = index;
-}
+}const curriculum = {
+  "Lower Primary": {
+    "Mathematics": {
+      "Numbers": ["Counting", "Writing Numbers"],
+      "Addition": ["Simple Addition"]
+    },
+    "English": {
+      "Alphabet": ["A-Z Letters"],
+      "Reading": ["Simple Words"]
+    }
+  },
+
+  "Upper Primary": {
+    "Mathematics": {
+      "Fractions": ["Introduction"]
+    },
+    "Science": {
+      "Living Things": ["Plants", "Animals"]
+    }
+  }
+};
