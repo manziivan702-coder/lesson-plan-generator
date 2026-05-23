@@ -79,4 +79,107 @@
 <script src="script.js"></script>
 
 </body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title>CBC Lesson Plan Generator</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(135deg, #e0f7fa, #f1f8ff);
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #023e8a;
+    }
+
+    pre {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 10px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>📘 CBC Lesson Plan Generator</h2>
+
+  <label>Subject:</label>
+  <select id="subject" onchange="loadUnits()">
+    <option value="">Select Subject</option>
+    <option value="math">Mathematics</option>
+    <option value="english">English</option>
+    <option value="science">Science</option>
+    <option value="sst">Social Studies</option>
+    <option value="kinyarwanda">Kinyarwanda</option>
+  </select>
+
+  <label>Unit:</label>
+  <select id="unit"></select>
+
+  <label>Level:</label>
+  <select id="level">
+    <option>P4</option>
+    <option>P5</option>
+    <option>P6</option>
+  </select>
+
+  <label>Number of learners:</label>
+  <input id="learners" type="number" />
+
+  <button onclick="generate()">Generate Lesson Plan</button>
+
+  <hr>
+
+  <pre id="output"></pre>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
