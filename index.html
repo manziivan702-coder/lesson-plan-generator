@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CBC Lesson Planner</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+  <h2>📘 CBC Lesson Plan Generator</h2>
+
+  <label>Subject:</label>
+  <select id="subject" onchange="loadUnits()">
+    <option value="">Select Subject</option>
+    <option value="math">Mathematics</option>
+    <option value="english">English</option>
+    <option value="science">Science</option>
+    <option value="sst">Social Studies</option>
+    <option value="kinyarwanda">Kinyarwanda</option>
+  </select>
+
+  <br><br>
+
+  <label>Level:</label>
+  <select id="level">
+    <option value="P4">P4</option>
+    <option value="P5">P5</option>
+    <option value="P6">P6</option>
+  </select>
+
+  <br><br>
+
+  <label>Unit:</label>
+  <select id="unit"></select>
+
+  <br><br>
+
+  <label>Number of learners:</label>
+  <input id="learners" type="number" />
+
+  <br><br>
+
+  <button onclick="generate()">Generate Lesson Plan</button>
+
+  <hr>
+
+  <pre id="output"></pre>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
