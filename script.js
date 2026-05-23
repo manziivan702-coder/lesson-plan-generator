@@ -410,4 +410,17 @@ This lesson on ${lesson} helps learners build strong understanding of ${unit} in
 - Environmental awareness
 - Peace and values education
 - Financial literacy basics (where applicable)
+`;let differentiation = `
+------------------------------------
+🧠 8. DIFFERENTIATED LEARNING
+------------------------------------
+
+Slow learners:
+- Extra support and guided examples
+
+Fast learners:
+- Additional challenging tasks
+
+SEN learners:
+- Adapted instructions and support provided based on category
 `;
