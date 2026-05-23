@@ -1,44 +1,23 @@
-<body>
-  <div class="container">
+<style>
+  body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8ff);
+  }
 
-    <h2>📘 CBC Lesson Plan Generator</h2>
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
 
-    <label>Subject:</label>
-    <select id="subject" onchange="loadUnits()">
-      <option value="">Select Subject</option>
-      <option value="math">Mathematics</option>
-      <option value="english">English</option>
-      <option value="science">Science</option>
-      <option value="sst">Social Studies</option>
-      <option value="kinyarwanda">Kinyarwanda</option>
-    </select>
-
-    <br><br>
-
-    <label>Level:</label>
-    <select id="level">
-      <option>P4</option>
-      <option>P5</option>
-      <option>P6</option>
-    </select>
-
-    <br><br>
-
-    <label>Unit:</label>
-    <select id="unit"></select>
-
-    <br><br>
-
-    <label>Number of learners:</label>
-    <input id="learners" type="number" />
-
-    <br><br>
-
-    <button onclick="generate()">Generate Lesson Plan</button>
-
-    <hr>
-
-    <pre id="output"></pre>
-
-  </div>
-</body>
+  button {
+    background: #0077b6;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+  }
+</style>
