@@ -133,4 +133,13 @@
 <script src="script.js"></script>
 
 </body>
-</html>
+</html>let sen = `
+SEN INFORMATION:
+
+Visual impairment: ${document.getElementById("sen_visual").value}
+Hearing impairment: ${document.getElementById("sen_hearing").value}
+Physical disability: ${document.getElementById("sen_physical").value}
+Learning difficulties: ${document.getElementById("sen_learning").value}
+Speech/language: ${document.getElementById("sen_speech").value}
+Gifted & talented: ${document.getElementById("sen_gifted").value}
+`;
