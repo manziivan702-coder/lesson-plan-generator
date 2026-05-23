@@ -401,4 +401,13 @@ This lesson on ${lesson} helps learners build strong understanding of ${unit} in
 - Summary of key points
 - Questions and feedback
 - Short evaluation
+`;let crossCutting = `
+------------------------------------
+🌍 7. CROSS-CUTTING ISSUES
+------------------------------------
+- Gender equality awareness
+- Inclusive education (SEN support applied)
+- Environmental awareness
+- Peace and values education
+- Financial literacy basics (where applicable)
 `;
