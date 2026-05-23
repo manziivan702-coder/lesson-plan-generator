@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>REB CBC Planner</title>
+  <title>REB CBC Lesson Planner</title>
 
   <style>
     body {
@@ -17,11 +17,6 @@
       background: #003366;
       color: white;
       padding: 20px;
-    }
-
-    .sidebar h2 {
-      font-size: 18px;
-      margin-bottom: 20px;
     }
 
     .step-btn {
@@ -40,6 +35,7 @@
       flex: 1;
       padding: 30px;
       background: white;
+      overflow-y: auto;
     }
 
     .step {
@@ -65,69 +61,73 @@
       cursor: pointer;
       margin-right: 10px;
     }
+
+    pre {
+      background: #f1f1f1;
+      padding: 15px;
+      white-space: pre-wrap;
+    }
   </style>
 </head>
 
 <body>
 
+<!-- SIDEBAR -->
 <div class="sidebar">
   <h2>📘 REB CBC</h2>
 
-  <div class="step-btn active" onclick="goStep(0)">1. Basic Info</div>
-  <div class="step-btn" onclick="goStep(1)">2. Academic</div>
-  <div class="step-btn" onclick="goStep(2)">3. Unit & Lesson</div>
-  <div class="step-btn" onclick="goStep(3)">4. Class Info</div>
-  <div class="step-btn" onclick="goStep(4)">5. Strategy</div>
-  <div class="step-btn" onclick="goStep(5)">6. Output</div>
+  <div class="step-btn active" onclick="goStep(0)">Basic Info</div>
+  <div class="step-btn" onclick="goStep(1)">Academic</div>
+  <div class="step-btn" onclick="goStep(2)">Unit & Lesson</div>
+  <div class="step-btn" onclick="goStep(3)">Class Info</div>
+  <div class="step-btn" onclick="goStep(4)">Strategy</div>
+  <div class="step-btn" onclick="goStep(5)">Output</div>
 </div>
 
+<!-- CONTENT -->
 <div class="content">
 
-  <!-- STEP 1 -->
   <div class="step active">
     <h3>Basic Info</h3>
-    <input placeholder="School Name">
-    <input placeholder="Teacher Name">
+    <input id="school" placeholder="School Name">
+    <input id="teacher" placeholder="Teacher Name">
   </div>
 
-  <!-- STEP 2 -->
   <div class="step">
-    <h3>Academic Info</h3>
-    <select>
+    <h3>Academic</h3>
+
+    <select id="level" onchange="loadSubjects(this.value)">
       <option>Lower Primary</option>
       <option>Upper Primary</option>
-      <option>O-Level</option>
     </select>
+
+    <select id="subject" onchange="loadUnits()"></select>
+
+    <select id="unit" onchange="loadLessons()"></select>
+
+    <select id="lesson"></select>
   </div>
 
-  <!-- STEP 3 -->
-  <div class="step">
-    <h3>Unit & Lesson</h3>
-    <input placeholder="Unit Number">
-    <input placeholder="Lesson Number">
-  </div>
-
-  <!-- STEP 4 -->
   <div class="step">
     <h3>Class Info</h3>
-    <input placeholder="Number of learners">
+    <input id="learners" placeholder="Number of learners">
   </div>
 
-  <!-- STEP 5 -->
   <div class="step">
     <h3>Strategy</h3>
-    <select>
+    <select id="strategy">
       <option>Group Work</option>
       <option>Discussion</option>
       <option>Role Play</option>
     </select>
   </div>
 
-  <!-- STEP 6 -->
   <div class="step">
     <h3>Output</h3>
-    <button>Generate Lesson Plan</button>
-    <button>Download PDF</button>
+    <button onclick="generate()">Generate Lesson Plan</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+
+    <pre id="output"></pre>
   </div>
 
 </div>
