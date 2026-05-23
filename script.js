@@ -142,4 +142,19 @@ Physical disability: ${document.getElementById("sen_physical").value}
 Learning difficulties: ${document.getElementById("sen_learning").value}
 Speech/language: ${document.getElementById("sen_speech").value}
 Gifted & talented: ${document.getElementById("sen_gifted").value}
+`;let output = `
+REB CBC LESSON PLAN
+
+School: ${school}
+Teacher: ${teacher}
+Level: ${level}
+Subject: ${subject}
+
+Unit: ${unit}
+Lesson: ${lesson}
+
+Learners: ${learners}
+Strategy: ${strategy}
+
+${sen}
 `;
