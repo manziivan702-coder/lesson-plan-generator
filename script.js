@@ -384,4 +384,21 @@ Learners:
 📍 5. LESSON SUMMARY
 ------------------------------------
 This lesson on ${lesson} helps learners build strong understanding of ${unit} in ${subject}.
+`;let lessonStages = `
+------------------------------------
+📚 6. LESSON STAGES
+------------------------------------
+
+1. INTRODUCTION:
+- Teacher introduces ${lesson}
+- Brainstorming and asking prior knowledge questions
+
+2. DEVELOPMENT:
+- Explanation of key concepts in ${unit}
+- Group work and demonstrations using ${strategy}
+
+3. CONCLUSION:
+- Summary of key points
+- Questions and feedback
+- Short evaluation
 `;
