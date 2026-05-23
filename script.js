@@ -279,4 +279,17 @@ function goStep(index) {
       "Living Things": ["Plants", "Animals"]
     }
   }
-};
+};function loadSubjects(level) {
+  let subject = document.getElementById("subject");
+  subject.innerHTML = "";
+
+  if (!curriculum[level]) return;
+
+  Object.keys(curriculum[level]).forEach(s => {
+    let opt = document.createElement("option");
+    opt.textContent = s;
+    subject.appendChild(opt);
+  });
+
+  loadUnits();
+}
