@@ -157,4 +157,90 @@ Learners: ${learners}
 Strategy: ${strategy}
 
 ${sen}
+`;function generate() {
+  let school = document.getElementById("school").value;
+  let teacher = document.getElementById("teacher").value;
+  let level = document.getElementById("level").value;
+  let subject = document.getElementById("subject").value;
+  let unit = document.getElementById("unit").value;
+  let lesson = document.getElementById("lesson").value;
+  let learners = document.getElementById("learners").value;
+  let strategy = document.getElementById("strategy").value;
+
+  // SEN
+  let sen = `
+SEN INFORMATION:
+- Visual impairment: ${document.getElementById("sen_visual").value}
+- Hearing impairment: ${document.getElementById("sen_hearing").value}
+- Physical disability: ${document.getElementById("sen_physical").value}
+- Learning difficulties: ${document.getElementById("sen_learning").value}
+- Speech/language: ${document.getElementById("sen_speech").value}
+- Gifted & talented: ${document.getElementById("sen_gifted").value}
 `;
+
+  // SMART CONTENT ENGINE (SIMULATION)
+  let objectives = `
+Lesson Objectives:
+- By the end of the lesson, learners should be able to understand ${lesson}
+- Demonstrate knowledge of ${unit}
+- Apply concepts in real life situations
+`;
+
+  let activities = `
+Teaching/Learning Activities:
+Teacher:
+- Introduces ${lesson}
+- Guides learners through examples
+- Facilitates ${strategy}
+
+Learners:
+- Participate actively
+- Work in groups
+- Answer questions
+`;
+
+  let assessment = `
+Assessment:
+- Oral questions
+- Written exercises
+- Group presentation
+`;
+
+  let competences = `
+Competences:
+- Critical thinking
+- Communication
+- Cooperation
+- Problem solving
+`;
+
+  let output = `
+========================
+REB CBC LESSON PLAN
+========================
+
+School: ${school}
+Teacher: ${teacher}
+Level: ${level}
+Subject: ${subject}
+
+Unit: ${unit}
+Lesson: ${lesson}
+
+Learners: ${learners}
+Strategy: ${strategy}
+
+------------------------
+${objectives}
+------------------------
+${activities}
+------------------------
+${assessment}
+------------------------
+${competences}
+------------------------
+${sen}
+`;
+
+  document.getElementById("output").innerText = output;
+}
