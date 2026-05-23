@@ -1,9 +1,186 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lesson Planner</title>
+  <title>REB CBC Lesson Planner</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #003366;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0055aa;
+    }
+
+    pre {
+      background: #f1f1f1;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
+
 <body>
+
+<div class="container">
+
+  <h2>📘 REB CBC Lesson Planner</h2>
+
+  <!-- STEP 1 -->
+  <div class="step active">
+    <h3>Step 1: Basic Info</h3>
+
+    <label>School Name</label>
+    <input id="school">
+
+    <label>Teacher Name</label>
+    <input id="teacher">
+
+    <label>Term</label>
+    <select id="term">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+    </select>
+
+    <label>Date</label>
+    <input type="date" id="date">
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <h3>Step 2: Academic Info</h3>
+
+    <label>Level</label>
+    <select id="level">
+      <option>Lower Primary</option>
+      <option>Upper Primary</option>
+      <option>Ordinary Level</option>
+      <option>Advanced Level</option>
+    </select>
+
+    <label>Subject</label>
+    <select id="subject"></select>
+
+    <label>Class</label>
+    <select id="class"></select>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <h3>Step 3: Unit & Lesson</h3>
+
+    <label>Unit Number</label>
+    <input id="unitNumber">
+
+    <label>Unit Title</label>
+    <select id="unitTitle"></select>
+
+    <label>Lesson Number</label>
+    <input id="lessonNumber">
+
+    <label>Lesson Title</label>
+    <select id="lessonTitle"></select>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <h3>Step 4: Class Info</h3>
+
+    <label>Total Learners</label>
+    <input type="number" id="learners">
+
+    <label>Class Size</label>
+    <input type="text" id="classSize">
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step">
+    <h3>Step 5: Teaching Strategy</h3>
+
+    <select id="strategy">
+      <option>Discussion</option>
+      <option>Group Work</option>
+      <option>Demonstration</option>
+      <option>Role Play</option>
+      <option>Brainstorming</option>
+    </select>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="step">
+    <h3>Generated Lesson Plan</h3>
+    <pre id="output"></pre>
+
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="buttons">
+    <button onclick="prevStep()">Back</button>
+    <button onclick="nextStep()">Next</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
