@@ -308,4 +308,21 @@ function goStep(index) {
   });
 
   loadLessons();
+}function loadLessons() {
+  let level = document.getElementById("level").value;
+  let subject = document.getElementById("subject").value;
+  let unit = document.getElementById("unit").value;
+
+  let lesson = document.getElementById("lesson");
+  lesson.innerHTML = "";
+
+  let data = curriculum?.[level]?.[subject]?.[unit];
+
+  if (!data) return;
+
+  data.forEach(l => {
+    let opt = document.createElement("option");
+    opt.textContent = l;
+    lesson.appendChild(opt);
+  });
 }
