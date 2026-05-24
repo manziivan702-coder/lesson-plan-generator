@@ -158,16 +158,7 @@ ${sen}
   let learners = document.getElementById("learners").value;
   let strategy = document.getElementById("strategy").value;
 
-  // SEN
-  let sen = `
-SEN INFORMATION:
-- Visual impairment: ${document.getElementById("sen_visual").value}
-- Hearing impairment: ${document.getElementById("sen_hearing").value}
-- Physical disability: ${document.getElementById("sen_physical").value}
-- Learning difficulties: ${document.getElementById("sen_learning").value}
-- Speech/language: ${document.getElementById("sen_speech").value}
-- Gifted & talented: ${document.getElementById("sen_gifted").value}
-`;<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"></div>
+  
 
   // SMART CONTENT ENGINE (SIMULATION)
   let objectives = `
