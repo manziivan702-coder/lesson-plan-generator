@@ -70,8 +70,10 @@ button:hover{
 <input id="subject" placeholder="Subject">
 
 <select id="class">
-  <option>S1</option><option>S2</option><option>S3</option>
+  <option>p4</option><option>p5</option><option>p6</option>
+  <option>p1</option><option>p2</option><option>p3</option>
   <option>S4</option><option>S5</option><option>S6</option>
+  <option>S1</option><option>S2</option><option>S3</option>
 </select>
 
 <select id="term">
@@ -94,81 +96,7 @@ button:hover{
 <textarea id="crosscutting" placeholder="Cross-cutting Issues"></textarea>
 <textarea id="previous" placeholder="Previous Knowledge"></textarea>
 
-<!-- OBJECTIVES -->
-<textarea id="generalObj" placeholder="General Objective"></textarea>
-<textarea id="specificObj" placeholder="Specific Objectives"></textarea>
 
 <!-- TEACHING -->
 <textarea id="materials" placeholder="Teaching Materials"></textarea>
 <textarea id="references" placeholder="References"></textarea>
-
-<!-- LESSON FLOW -->
-<textarea id="intro" placeholder="Introduction Activities"></textarea>
-<textarea id="development" placeholder="Development Activities"></textarea>
-<textarea id="conclusion" placeholder="Conclusion Activities"></textarea>
-
-<!-- ASSESSMENT -->
-<textarea id="assessment" placeholder="Assessment"></textarea>
-
-<!-- REFLECTION -->
-<textarea id="reflection" placeholder="Teacher Reflection"></textarea>
-
-<button onclick="generate()">Generate Lesson Plan</button>
-
-<div id="result" class="result"></div>
-
-</div>
-
-<script>
-function generate(){
-
-document.getElementById("result").innerHTML = `
-<h3>REB LESSON PLAN</h3>
-
-<p><b>Teacher:</b> ${teacher.value}</p>
-<p><b>School:</b> ${school.value}</p>
-<p><b>Subject:</b> ${subject.value}</p>
-<p><b>Class:</b> ${class.value}</p>
-<p><b>Term:</b> ${term.value}</p>
-<p><b>Date:</b> ${date.value}</p>
-<p><b>Duration:</b> ${duration.value}</p>
-
-<hr>
-
-<p><b>Unit:</b> ${unit.value}</p>
-<p><b>Lesson No:</b> ${lessonNo.value}</p>
-<p><b>Topic:</b> ${topic.value}</p>
-<p><b>Sub-topic:</b> ${subtopic.value}</p>
-
-<hr>
-
-<p><b>Competency:</b><br>${competency.value}</p>
-<p><b>Cross-cutting Issues:</b><br>${crosscutting.value}</p>
-<p><b>Previous Knowledge:</b><br>${previous.value}</p>
-
-<hr>
-
-<p><b>General Objective:</b><br>${generalObj.value}</p>
-<p><b>Specific Objectives:</b><br>${specificObj.value}</p>
-
-<hr>
-
-<p><b>Materials:</b><br>${materials.value}</p>
-<p><b>References:</b><br>${references.value}</p>
-
-<hr>
-
-<p><b>Introduction:</b><br>${intro.value}</p>
-<p><b>Development:</b><br>${development.value}</p>
-<p><b>Conclusion:</b><br>${conclusion.value}</p>
-
-<hr>
-
-<p><b>Assessment:</b><br>${assessment.value}</p>
-<p><b>Reflection:</b><br>${reflection.value}</p>
-`;
-}
-</script>
-
-</body>
-</html>
