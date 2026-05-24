@@ -523,3 +523,154 @@ button:hover {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REB Lesson Plan Generator</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#f4f6f8;
+  margin:0;
+  padding:20px;
+}
+
+.container{
+  max-width:800px;
+  margin:auto;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+}
+
+input, select, textarea{
+  width:100%;
+  padding:10px;
+  margin:6px 0 12px 0;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+label{
+  font-size:14px;
+  font-weight:bold;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  background:#2ecc71;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#27ae60;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>REB Lesson Plan Generator</h2>
+
+<form>
+
+<!-- EVERYTHING IN ONE FLOW (NO SECTIONS) -->
+
+<label>Teacher Name</label>
+<input type="text">
+
+<label>School</label>
+<input type="text">
+
+<label>Subject</label>
+<input type="text">
+
+<label>Class</label>
+<select>
+  <option>S1</option>
+  <option>S2</option>
+  <option>S3</option>
+  <option>S4</option>
+  <option>S5</option>
+  <option>S6</option>
+</select>
+
+<label>Term</label>
+<select>
+  <option>Term I</option>
+  <option>Term II</option>
+  <option>Term III</option>
+</select>
+
+<label>Date</label>
+<input type="date">
+
+<label>Duration (minutes)</label>
+<input type="number">
+
+<label>Unit</label>
+<input type="text">
+
+<label>Lesson Number</label>
+<input type="number">
+
+<label>Topic</label>
+<input type="text">
+
+<label>Sub-topic</label>
+<input type="text">
+
+<label>Key Competency</label>
+<textarea></textarea>
+
+<label>Cross-cutting Issues</label>
+<textarea></textarea>
+
+<label>Previous Knowledge</label>
+<textarea></textarea>
+
+<label>General Objective</label>
+<textarea></textarea>
+
+<label>Specific Objectives</label>
+<textarea></textarea>
+
+<label>Teaching Materials</label>
+<textarea></textarea>
+
+<label>References</label>
+<textarea></textarea>
+
+<label>Introduction Activities</label>
+<textarea></textarea>
+
+<label>Development Activities</label>
+<textarea></textarea>
+
+<label>Conclusion Activities</label>
+<textarea></textarea>
+
+<label>Assessment</label>
+<textarea></textarea>
+
+<label>Teacher Reflection</label>
+<textarea></textarea>
+
+<button type="button">Generate Lesson Plan</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
