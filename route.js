@@ -1,49 +1,35 @@
-import OpenAI from "openai";
+export async function POST(request) {
+  console.log("API WORKING");
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+  const body = await request.json();
 
-export async function POST(req) {
-  try {
-    const body = await req.json();
+  const { level, subject, unit, lesson } = body;
 
-    const { level, subject, unit, lesson } = body;
-
-    const prompt = `
-You are a REB curriculum expert (Rwanda).
-
-Create a full lesson plan in REB format 2025.
+  return Response.json({
+    success: true,
+    lessonPlan: `
+REB LESSON PLAN (TEST MODE)
 
 Level: ${level}
 Subject: ${subject}
 Unit: ${unit}
 Lesson: ${lesson}
 
-Include:
-- Competences
-- Objectives
-- Teacher activities
-- Learner activities
-- Assessment
-- Homework
+1. Competences
+- Students understand the topic
 
-Make it simple and ready for teachers.
-`;
+2. Objectives
+- Learn and apply concepts
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        { role: "system", content: "You generate REB lesson plans." },
-        { role: "user", content: prompt },
-      ],
-    });
+3. Activities
+Teacher: Explain topic
+Learners: Practice exercises
 
-    return Response.json({
-      lessonPlan: response.choices[0].message.content,
-    });
+4. Assessment
+- Questions and exercises
 
-  } catch (err) {
-    return Response.json({ error: err.message }, { status: 500 });
-  }
-}
+5. Homework
+- Revision exercises
+    `,
+  });
+}npm run dev

@@ -1,6 +1,8 @@
+"use client";
+
 import { useState } from "react";
 
-export default function Home() {
+export default function Page() {
   const [lessonPlan, setLessonPlan] = useState("");
 
   async function generate() {
@@ -9,9 +11,9 @@ export default function Home() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         level: "P5",
-        subject: "Mathematics",
+        subject: "Math",
         unit: "Fractions",
-        lesson: "Introduction to fractions",
+        lesson: "Intro",
       }),
     });
 
@@ -20,9 +22,9 @@ export default function Home() {
   }
 
   return (
-    <div style={{ padding: 20 }}>
+    <div>
       <button onClick={generate}>
-        Generate Lesson Plan AI
+        Generate
       </button>
 
       <pre>{lessonPlan}</pre>
