@@ -176,7 +176,7 @@ SEN INFORMATION:
 - Learning difficulties: ${document.getElementById("sen_learning").value}
 - Speech/language: ${document.getElementById("sen_speech").value}
 - Gifted & talented: ${document.getElementById("sen_gifted").value}
-`;
+`;<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"></div>
 
   // SMART CONTENT ENGINE (SIMULATION)
   let objectives = `
@@ -423,4 +423,4 @@ Fast learners:
 
 SEN learners:
 - Adapted instructions and support provided based on category
-`;
+`;ssss
