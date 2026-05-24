@@ -996,4 +996,124 @@ document.getElementById("result").style.display = "block";
 </script>
 
 </body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REB Lesson Plan</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#f4f6f8;
+  margin:0;
+  padding:20px;
+}
+
+.container{
+  max-width:800px;
+  margin:auto;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+}
+
+input, textarea, select{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  background:#2ecc71;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#27ae60;
+}
+
+.result{
+  margin-top:20px;
+  padding:15px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  background:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>REB Lesson Plan Generator</h2>
+
+<input id="teacher" placeholder="Teacher Name">
+<input id="school" placeholder="School">
+<input id="subject" placeholder="Subject">
+
+<select id="class">
+  <option>S1</option>
+  <option>S2</option>
+  <option>S3</option>
+  <option>S4</option>
+  <option>S5</option>
+  <option>S6</option>
+</select>
+
+<select id="term">
+  <option>Term I</option>
+  <option>Term II</option>
+  <option>Term III</option>
+</select>
+
+<input id="topic" placeholder="Topic">
+<input id="unit" placeholder="Unit">
+<input id="lesson" placeholder="Lesson Number">
+
+<textarea id="objectives" placeholder="Objectives"></textarea>
+<textarea id="activities" placeholder="Teaching Activities"></textarea>
+<textarea id="assessment" placeholder="Assessment"></textarea>
+
+<button onclick="generate()">Generate Lesson Plan</button>
+
+<div id="result" class="result"></div>
+
+</div>
+
+<script>
+function generate(){
+
+document.getElementById("result").innerHTML = `
+<h3>REB LESSON PLAN</h3>
+
+<p><b>Teacher:</b> ${teacher.value}</p>
+<p><b>School:</b> ${school.value}</p>
+<p><b>Subject:</b> ${subject.value}</p>
+<p><b>Class:</b> ${class.value}</p>
+<p><b>Term:</b> ${term.value}</p>
+<p><b>Unit:</b> ${unit.value}</p>
+<p><b>Lesson:</b> ${lesson.value}</p>
+<p><b>Topic:</b> ${topic.value}</p>
+
+<hr>
+
+<p><b>Objectives:</b><br>${objectives.value}</p>
+<p><b>Activities:</b><br>${activities.value}</p>
+<p><b>Assessment:</b><br>${assessment.value}</p>
+`;
+}
+</script>
+
+</body>
 </html>
