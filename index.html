@@ -842,4 +842,158 @@ button:hover{
 </div>
 
 </body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REB Lesson Plan Generator</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#f4f6f8;
+  margin:0;
+  padding:20px;
+}
+
+.container{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+}
+
+input, select, textarea{
+  width:100%;
+  padding:10px;
+  margin:6px 0 12px 0;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  background:#2ecc71;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#27ae60;
+}
+
+/* RESULT STYLE */
+.result{
+  display:none;
+  margin-top:20px;
+  padding:15px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  background:#fff;
+}
+
+h3{
+  border-bottom:2px solid #2ecc71;
+  padding-bottom:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>REB Lesson Plan Generator</h2>
+
+<!-- FORM -->
+<div id="formBox">
+
+<input id="teacher" placeholder="Teacher Name">
+<input id="school" placeholder="School">
+<input id="subject" placeholder="Subject">
+
+<select id="class">
+  <option>S1</option>
+  <option>S2</option>
+  <option>S3</option>
+  <option>S4</option>
+  <option>S5</option>
+  <option>S6</option>
+</select>
+
+<select id="term">
+  <option>Term I</option>
+  <option>Term II</option>
+  <option>Term III</option>
+</select>
+
+<input id="topic" placeholder="Topic">
+<input id="unit" placeholder="Unit">
+<input id="lessonNo" type="number" placeholder="Lesson Number">
+
+<textarea id="objectives" placeholder="Objectives"></textarea>
+<textarea id="activities" placeholder="Teaching Activities"></textarea>
+<textarea id="assessment" placeholder="Assessment"></textarea>
+
+<button onclick="generate()">Generate Lesson Plan</button>
+
+</div>
+
+<!-- RESULT -->
+<div id="result" class="result"></div>
+
+</div>
+
+<script>
+function generate(){
+
+let teacher = document.getElementById("teacher").value;
+let school = document.getElementById("school").value;
+let subject = document.getElementById("subject").value;
+let cls = document.getElementById("class").value;
+let term = document.getElementById("term").value;
+let topic = document.getElementById("topic").value;
+let unit = document.getElementById("unit").value;
+let lessonNo = document.getElementById("lessonNo").value;
+let objectives = document.getElementById("objectives").value;
+let activities = document.getElementById("activities").value;
+let assessment = document.getElementById("assessment").value;
+
+/* build result */
+let output = `
+<h3>REB LESSON PLAN</h3>
+
+<p><b>Teacher:</b> ${teacher}</p>
+<p><b>School:</b> ${school}</p>
+<p><b>Subject:</b> ${subject}</p>
+<p><b>Class:</b> ${cls}</p>
+<p><b>Term:</b> ${term}</p>
+<p><b>Unit:</b> ${unit}</p>
+<p><b>Lesson No:</b> ${lessonNo}</p>
+<p><b>Topic:</b> ${topic}</p>
+
+<hr>
+
+<p><b>Objectives:</b><br>${objectives}</p>
+
+<p><b>Activities:</b><br>${activities}</p>
+
+<p><b>Assessment:</b><br>${assessment}</p>
+`;
+
+document.getElementById("result").innerHTML = output;
+
+/* hide form, show result */
+document.getElementById("formBox").style.display = "none";
+document.getElementById("result").style.display = "block";
+}
+</script>
+
+</body>
 </html>
