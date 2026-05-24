@@ -1,132 +1,390 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>REB CBC Lesson Planner</title>
 
   <style>
-    body {
-      font-family: Arial;
-      background: #f4f7fb;
-      margin: 0;
-      display: flex;
-      height: 100vh;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
     }
 
-    .sidebar {
-      width: 220px;
-      background: #003366;
-      color: white;
-      padding: 15px;
+    body{
+      background:#f4f7fb;
+      display:flex;
+      min-height:100vh;
     }
 
-    .step-btn {
-      padding: 10px;
-      margin-bottom: 10px;
-      background: rgba(255,255,255,0.1);
-      cursor: pointer;
-      border-radius: 5px;
+    /* SIDEBAR */
+
+    .sidebar{
+      width:240px;
+      background:#003366;
+      color:white;
+      padding:20px;
     }
 
-    .step-btn.active {
-      background: #0055aa;
+    .logo{
+      font-size:24px;
+      font-weight:bold;
+      margin-bottom:30px;
     }
 
-    .content {
-      flex: 1;
-      padding: 20px;
-      background: white;
+    .step-btn{
+      padding:15px;
+      border-radius:12px;
+      margin-bottom:12px;
+      cursor:pointer;
+      background:rgba(255,255,255,0.08);
+      transition:0.3s;
+      font-weight:bold;
     }
 
-    .step {
-      display: none;
+    .step-btn:hover{
+      background:#0055aa;
     }
 
-    .step.active {
-      display: block;
+    .step-btn.active{
+      background:#0066cc;
     }
 
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
+    /* MAIN CONTENT */
+
+    .content{
+      flex:1;
+      padding:40px;
     }
 
-    button {
-      padding: 10px;
-      background: #003366;
-      color: white;
-      border: none;
-      margin-top: 10px;
-      cursor: pointer;
+    .step{
+      display:none;
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      max-width:900px;
     }
 
-    pre {
-      background: #eee;
-      padding: 10px;
-      white-space: pre-wrap;
+    .step.active{
+      display:block;
     }
+
+    h2{
+      margin-bottom:25px;
+      color:#003366;
+    }
+
+    input, select{
+      width:100%;
+      height:52px;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid #ccc;
+      margin-bottom:18px;
+      font-size:16px;
+    }
+
+    button{
+      background:#003366;
+      color:white;
+      border:none;
+      padding:14px 22px;
+      border-radius:10px;
+      cursor:pointer;
+      font-size:16px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#0055aa;
+    }
+
+    pre{
+      background:#f1f1f1;
+      padding:20px;
+      border-radius:12px;
+      white-space:pre-wrap;
+      line-height:1.6;
+      margin-top:20px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      body{
+        flex-direction:column;
+      }
+
+      .sidebar{
+        width:100%;
+        display:flex;
+        overflow:auto;
+        gap:10px;
+      }
+
+      .logo{
+        display:none;
+      }
+
+      .content{
+        padding:15px;
+      }
+
+      .step{
+        padding:20px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-<div class="sidebar">
-  <h3>📘 REB CBC</h3>
+  <!-- SIDEBAR -->
 
-  <div class="step-btn active" onclick="goStep(0)">Basic Info</div>
-  <div class="step-btn" onclick="goStep(1)">Academic</div>
-  <div class="step-btn" onclick="goStep(2)">Lesson</div>
-  <div class="step-btn" onclick="goStep(3)">Output</div>
-</div>
+  <div class="sidebar">
 
-<div class="content">
+    <div class="logo">
+      📘 REB CBC
+    </div>
 
-  <!-- STEP 1 -->
-  <div class="step active">
-    <h2>Basic Info</h2>
-    <input id="school" placeholder="School Name">
-    <input id="teacher" placeholder="Teacher Name">
+    <div class="step-btn active" onclick="goStep(0)">
+      Basic Info
+    </div>
+
+    <div class="step-btn" onclick="goStep(1)">
+      Academic
+    </div>
+
+    <div class="step-btn" onclick="goStep(2)">
+      Lesson
+    </div>
+
+    <div class="step-btn" onclick="goStep(3)">
+      Output
+    </div>
+
   </div>
 
-  <!-- STEP 2 -->
-  <div class="step">
-    <h2>Academic</h2>
+  <!-- CONTENT -->
 
-    <select id="level" onchange="loadSubjects(this.value)">
-      <option>Lower Primary</option>
-      <option>Upper Primary</option>
-    </select>
+  <div class="content">
 
-    <select id="subject" onchange="loadUnits()"></select>
+    <!-- STEP 1 -->
 
-    <select id="unit" onchange="loadLessons()"></select>
+    <div class="step active">
 
-    <select id="lesson"></select>
+      <h2>Basic Information</h2>
+
+      <input
+        id="school"
+        placeholder="School Name"
+      >
+
+      <input
+        id="teacher"
+        placeholder="Teacher Name"
+      >
+
+    </div>
+
+    <!-- STEP 2 -->
+
+    <div class="step">
+
+      <h2>Academic Information</h2>
+
+      <select id="level" onchange="loadSubjects(this.value)">
+        <option>Lower Primary</option>
+        <option>Upper Primary</option>
+      </select>
+
+      <select id="subject" onchange="loadUnits()"></select>
+
+      <select id="unit" onchange="loadLessons()"></select>
+
+      <select id="lesson"></select>
+
+    </div>
+
+    <!-- STEP 3 -->
+
+    <div class="step">
+
+      <h2>Lesson Information</h2>
+
+      <input
+        id="learners"
+        placeholder="Number of learners"
+      >
+
+      <select id="strategy">
+        <option>Group Work</option>
+        <option>Discussion</option>
+        <option>Role Play</option>
+      </select>
+
+      <button onclick="generate()">
+        Generate Lesson Plan
+      </button>
+
+    </div>
+
+    <!-- STEP 4 -->
+
+    <div class="step">
+
+      <h2>Generated Output</h2>
+
+      <button onclick="downloadPDF()">
+        Download PDF
+      </button>
+
+      <pre id="output"></pre>
+
+    </div>
+
   </div>
 
-  <!-- STEP 3 -->
-  <div class="step">
-    <h2>Lesson Info</h2>
+<script>
 
-    <input id="learners" placeholder="Number of learners">
+  const steps = document.querySelectorAll(".step");
+  const buttons = document.querySelectorAll(".step-btn");
 
-    <select id="strategy">
-      <option>Group Work</option>
-      <option>Discussion</option>
-      <option>Role Play</option>
-    </select>
+  function goStep(index){
 
-    <button onclick="generate()">Generate Lesson Plan</button>
-  </div>
+    steps.forEach(step => {
+      step.classList.remove("active");
+    });
 
-  <!-- STEP 4 -->
-  <div class="step">
-    <h2>Output</h2>
+    buttons.forEach(btn => {
+      btn.classList.remove("active");
+    });
 
-    <button onclick="downloadPDF()">Download PDF</button>
+    steps[index].classList.add("active");
+    buttons[index].classList.add("active");
 
-    <pre id="output"></pre>
-  </div>
+  }
 
-</div>
+  function loadSubjects(level){
 
+    const subject = document.getElementById("subject");
+
+    if(level === "Lower Primary"){
+
+      subject.innerHTML = `
+        <option>Mathematics</option>
+        <option>English</option>
+        <option>Kinyarwanda</option>
+      `;
+
+    }else{
+
+      subject.innerHTML = `
+        <option>Science</option>
+        <option>Social Studies</option>
+        <option>ICT</option>
+      `;
+
+    }
+
+    loadUnits();
+
+  }
+
+  function loadUnits(){
+
+    const unit = document.getElementById("unit");
+
+    unit.innerHTML = `
+      <option>Unit 1</option>
+      <option>Unit 2</option>
+      <option>Unit 3</option>
+    `;
+
+    loadLessons();
+
+  }
+
+  function loadLessons(){
+
+    const lesson = document.getElementById("lesson");
+
+    lesson.innerHTML = `
+      <option>Lesson 1</option>
+      <option>Lesson 2</option>
+      <option>Lesson 3</option>
+    `;
+
+  }
+
+  function generate(){
+
+    const school = document.getElementById("school").value;
+    const teacher = document.getElementById("teacher").value;
+    const level = document.getElementById("level").value;
+    const subject = document.getElementById("subject").value;
+    const unit = document.getElementById("unit").value;
+    const lesson = document.getElementById("lesson").value;
+    const learners = document.getElementById("learners").value;
+    const strategy = document.getElementById("strategy").value;
+
+    const result = `
+SCHOOL: ${school}
+
+TEACHER: ${teacher}
+
+LEVEL: ${level}
+
+SUBJECT: ${subject}
+
+UNIT: ${unit}
+
+LESSON: ${lesson}
+
+LEARNERS: ${learners}
+
+TEACHING STRATEGY: ${strategy}
+
+COMPETENCE:
+Learners will understand the lesson content successfully.
+
+ACTIVITIES:
+1. Teacher introduction
+2. Group discussion
+3. Learner participation
+4. Assessment
+
+ASSESSMENT:
+Questions and answers.
+
+HOMEWORK:
+Revise today's lesson.
+    `;
+
+    document.getElementById("output").textContent = result;
+
+    goStep(3);
+
+  }
+
+  function downloadPDF(){
+
+    window.print();
+
+  }
+
+  loadSubjects("Lower Primary");
+
+</script>
+
+</body>
+</html>
