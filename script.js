@@ -395,4 +395,13 @@ Fast learners:
 
 SEN learners:
 - Adapted instructions and support provided based on category
-`;ssss
+`;ssssfunction openWhatsApp(){
+
+    let phone = "250794666702"; // 👈 SHYIRAMO NUMBER YAWE HANO
+
+    let message = "Hello, I need help with REB Lesson Plan Generator";
+
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
