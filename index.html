@@ -404,3 +404,122 @@ Revise today's lesson.
    z-index: 9999;">
    💬 WhatsApp Help
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REB Lesson Plan Generator</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.header p {
+  color: gray;
+}
+
+/* FORM CARD */
+.container {
+  max-width: 700px;
+  margin: auto;
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #27ae60;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>REB Lesson Plan Generator</h1>
+  <p>Generate professional lesson plans instantly</p>
+</div>
+
+<div class="container">
+
+<form>
+
+<label>Subject</label>
+<input type="text" placeholder="e.g Mathematics">
+
+<label>Class</label>
+<select>
+  <option>S1</option>
+  <option>S2</option>
+  <option>S3</option>
+  <option>S4</option>
+  <option>S5</option>
+  <option>S6</option>
+</select>
+
+<label>Term</label>
+<select>
+  <option>Term I</option>
+  <option>Term II</option>
+  <option>Term III</option>
+</select>
+
+<label>Unit</label>
+<input type="text">
+
+<label>Topic</label>
+<input type="text">
+
+<label>Duration (minutes)</label>
+<input type="number">
+
+<button type="button">Generate Lesson Plan</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
