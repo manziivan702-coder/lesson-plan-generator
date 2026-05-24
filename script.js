@@ -147,16 +147,6 @@ Lesson: ${lesson}
 Learners: ${learners}
 Strategy: ${strategy}
 
-${sen}
-`;function generate() {
-  let school = document.getElementById("school").value;
-  let teacher = document.getElementById("teacher").value;
-  let level = document.getElementById("level").value;
-  let subject = document.getElementById("subject").value;
-  let unit = document.getElementById("unit").value;
-  let lesson = document.getElementById("lesson").value;
-  let learners = document.getElementById("learners").value;
-  let strategy = document.getElementById("strategy").value;
 
   
 
