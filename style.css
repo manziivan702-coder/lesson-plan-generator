@@ -1,0 +1,10 @@
+body { margin: 0; font-family: Arial; background: #f4f4ff; }
+header { background: #6c3bff; color: white; text-align: center; padding: 40px 20px; }
+header h1 { margin: 0; font-size: 40px; }
+.container { max-width: 800px; margin: 30px auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+input, select, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+textarea { min-height: 120px; }
+button { width: 100%; padding: 14px; margin-top: 10px; background: #6c3bff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; }
+button:hover { background: #582de0; }
+#output { margin-top: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background: #fafafa; }
+.whatsapp { position: fixed; right: 20px; bottom: 20px; background: #25D366; color: white; padding: 14px 18px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
