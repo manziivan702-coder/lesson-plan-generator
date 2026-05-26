@@ -151,7 +151,9 @@ footer{
 
   <div class="buttons">
     <a href="#" class="btn primary">
-      Get Started
+      <a href="#generator">
+  <button>Get Started</button>
+</a>
     </a>
 
     <a href="#" class="btn secondary">
@@ -181,7 +183,7 @@ footer{
 </section>
 
 <footer>
-  © 2026 SLP — Developed by MANZI Ivan
+  © 2026 SLP 
 </footer>
 
 <a class="whatsapp"
@@ -202,5 +204,28 @@ target="_blank">
   <button>
     Generate Lesson Plan
   </button>
+
+</section>
+<section id="generator" style="padding: 40px; margin-top: 60px;">
+
+  <h2>Lesson Plan Generator</h2>
+
+  <input type="text" id="grade" placeholder="Grade" />
+  <br>
+
+  <input type="text" id="subject" placeholder="Subject" />
+  <br>
+
+  <input type="text" id="topic" placeholder="Topic" />
+  <br>
+
+  <input type="text" id="verb" placeholder="Bloom Verb" />
+  <br>
+
+  <button onclick="generateLesson()">
+    Generate Lesson Plan
+  </button>
+
+  <div id="output" style="margin-top:20px;"></div>
 
 </section>
