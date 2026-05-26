@@ -8,10 +8,3 @@ button { width: 100%; padding: 14px; margin-top: 10px; background: #6c3bff; colo
 button:hover { background: #582de0; }
 #output { margin-top: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background: #fafafa; }
 .whatsapp { position: fixed; right: 20px; bottom: 20px; background: #25D366; color: white; padding: 14px 18px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-.lesson-result {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  line-height: 1.7;
-}
