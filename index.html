@@ -1,9 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Empty Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SLP Platform</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f7fb;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+
+    .container{
+      text-align:center;
+      background:white;
+      padding:50px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+      width:90%;
+      max-width:500px;
+    }
+
+    h1{
+      font-size:38px;
+      margin-bottom:15px;
+      color:#222;
+    }
+
+    p{
+      color:#666;
+      margin-bottom:35px;
+      line-height:1.6;
+    }
+
+    .btn-group{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    button{
+      padding:14px;
+      border:none;
+      border-radius:12px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s ease;
+      font-weight:bold;
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg,#4f46e5,#06b6d4);
+      color:white;
+    }
+
+    .primary-btn:hover{
+      transform:translateY(-2px);
+      opacity:0.95;
+    }
+
+    .secondary-btn{
+      background:white;
+      border:2px solid #ddd;
+      color:#333;
+    }
+
+    .secondary-btn:hover{
+      background:#f3f4f6;
+    }
+
+    .whatsapp-btn{
+      background:#25D366;
+      color:white;
+    }
+
+    .whatsapp-btn:hover{
+      opacity:0.9;
+    }
+
+  </style>
 </head>
+
 <body>
+
+  <div class="container">
+
+    <h1>SLP Platform</h1>
+
+    <p>
+      Welcome to Smart Lesson Plan Platform.<br>
+      Generate and manage professional lesson plans easily.
+    </p>
+
+    <div class="btn-group">
+
+      <button class="primary-btn">
+        Get Started
+      </button>
+
+      <a href="https://wa.me/250794666702" target="_blank">
+        <button class="whatsapp-btn">
+          WhatsApp Support
+        </button>
+      </a>
+
+      <button class="secondary-btn">
+        Register
+      </button>
+
+      <button class="secondary-btn">
+        User Guide
+      </button>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
