@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>SLP Platform</title>
 
   <style>
@@ -19,45 +21,48 @@
       display:flex;
       justify-content:center;
       align-items:center;
-      height:100vh;
+      min-height:100vh;
+      padding:20px;
     }
 
     .container{
-      text-align:center;
       background:white;
-      padding:50px;
+      width:100%;
+      max-width:500px;
+      padding:50px 30px;
       border-radius:20px;
       box-shadow:0 10px 30px rgba(0,0,0,0.1);
-      width:90%;
-      max-width:500px;
+      text-align:center;
     }
 
     h1{
-      font-size:38px;
-      margin-bottom:15px;
+      font-size:40px;
       color:#222;
+      margin-bottom:15px;
     }
 
     p{
       color:#666;
+      line-height:1.7;
       margin-bottom:35px;
-      line-height:1.6;
+      font-size:17px;
     }
 
     .btn-group{
       display:flex;
       flex-direction:column;
-      gap:15px;
+      gap:18px;
     }
 
     button{
-      padding:14px;
+      width:100%;
+      padding:16px;
       border:none;
       border-radius:12px;
-      font-size:16px;
+      font-size:17px;
+      font-weight:bold;
       cursor:pointer;
       transition:0.3s ease;
-      font-weight:bold;
     }
 
     .primary-btn{
@@ -70,6 +75,15 @@
       opacity:0.95;
     }
 
+    .whatsapp-btn{
+      background:#25D366;
+      color:white;
+    }
+
+    .whatsapp-btn:hover{
+      opacity:0.9;
+    }
+
     .secondary-btn{
       background:white;
       border:2px solid #ddd;
@@ -80,16 +94,8 @@
       background:#f3f4f6;
     }
 
-    .whatsapp-btn{
-      background:#25D366;
-      color:white;
-    }
-
-    .whatsapp-btn:hover{
-      opacity:0.9;
-    }
-
   </style>
+
 </head>
 
 <body>
@@ -100,7 +106,7 @@
 
     <p>
       Welcome to Smart Lesson Plan Platform.<br>
-      Generate and manage professional lesson plans easily.
+      Create professional lesson plans easily.
     </p>
 
     <div class="btn-group">
@@ -128,4 +134,5 @@
   </div>
 
 </body>
+
 </html>
