@@ -36,4 +36,19 @@ button{
   cursor:pointer;
   transition:0.3s ease;
   font-weight:bold;
+}.get-started-btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.get-started-btn:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
 }
