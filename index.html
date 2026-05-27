@@ -7,7 +7,6 @@
 
   <title>SLP AI Platform</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -25,7 +24,7 @@
       overflow-x:hidden;
     }
 
-    /* BACKGROUND GLOW */
+    /* BACKGROUND */
 
     .bg-glow{
       position:absolute;
@@ -137,17 +136,15 @@
       margin-bottom:45px;
     }
 
-    /* BUTTONS */
+    /* BUTTON */
 
     .btn-group{
       display:flex;
       justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
     }
 
     .btn{
-      padding:18px 32px;
+      padding:18px 34px;
       border-radius:16px;
       text-decoration:none;
       font-weight:700;
@@ -155,6 +152,7 @@
       transition:0.3s ease;
       border:none;
       cursor:pointer;
+      display:inline-block;
     }
 
     .primary-btn{
@@ -165,17 +163,6 @@
 
     .primary-btn:hover{
       transform:translateY(-4px) scale(1.02);
-    }
-
-    .secondary-btn{
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.1);
-      color:white;
-      backdrop-filter:blur(12px);
-    }
-
-    .secondary-btn:hover{
-      background:rgba(255,255,255,0.12);
     }
 
     /* FEATURES */
@@ -226,10 +213,26 @@
 
     footer{
       text-align:center;
-      padding:40px;
+      padding:50px 20px;
       color:#64748b;
       border-top:1px solid rgba(255,255,255,0.08);
       margin-top:80px;
+    }
+
+    .footer-btn{
+      margin-top:25px;
+      display:inline-block;
+      padding:14px 26px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:600;
+      background:#25D366;
+      color:white;
+      transition:0.3s;
+    }
+
+    .footer-btn:hover{
+      opacity:0.9;
     }
 
     /* MOBILE */
@@ -251,10 +254,6 @@
 
       .btn{
         width:100%;
-      }
-
-      .btn-group{
-        flex-direction:column;
       }
 
       .section-title{
@@ -281,9 +280,7 @@
     </div>
 
     <div class="nav-links">
-      <a href="#">Home</a>
       <a href="#">Features</a>
-      <a href="#">Register</a>
       <a href="#">Login</a>
     </div>
 
@@ -313,20 +310,6 @@
 
         <a href="#" class="btn primary-btn">
           Get Started
-        </a>
-
-        <a href="https://wa.me/250794666702"
-           target="_blank"
-           class="btn secondary-btn">
-          WhatsApp Support
-        </a>
-
-        <a href="#" class="btn secondary-btn">
-          Register
-        </a>
-
-        <a href="#" class="btn secondary-btn">
-          User Guide
         </a>
 
       </div>
@@ -376,7 +359,17 @@
   <!-- FOOTER -->
 
   <footer>
-    © 2026 SLP AI Platform — Built for Modern Teachers
+
+    <p>
+      © 2026 SLP AI Platform — Built for Modern Teachers
+    </p>
+
+    <a href="https://wa.me/250794666702"
+       target="_blank"
+       class="footer-btn">
+      WhatsApp Support
+    </a>
+
   </footer>
 
 </body>
