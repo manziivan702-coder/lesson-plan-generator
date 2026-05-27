@@ -2,147 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>SLP Platform</title>
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
-
-    body{
-      background:#f5f7fb;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      min-height:100vh;
-      padding:20px;
-    }
-
-    .container{
-      background:white;
-      width:100%;
-      max-width:500px;
-      padding:50px 30px;
-      border-radius:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.1);
-      text-align:center;
-    }
-
-    h1{
-      font-size:40px;
-      color:#222;
-      margin-bottom:15px;
-    }
-
-    p{
-      color:#666;
-      line-height:1.7;
-      margin-bottom:35px;
-      font-size:17px;
-    }
-
-    .btn-group{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-
-    button{
-      width:100%;
-      padding:16px;
-      border:none;
-      border-radius:12px;
-      font-size:17px;
-      font-weight:bold;
-      cursor:pointer;
-      transition:0.3s ease;
-    }
-
-    .primary-btn{
-      background:linear-gradient(135deg,#4f46e5,#06b6d4);
-      color:white;
-    }
-
-    .primary-btn:hover{
-      transform:translateY(-2px);
-      opacity:0.95;
-    }
-
-    .whatsapp-btn{
-      background:#25D366;
-      color:white;
-    }
-
-    .whatsapp-btn:hover{
-      opacity:0.9;
-    }
-
-    .secondary-btn{
-      background:white;
-      border:2px solid #ddd;
-      color:#333;
-    }
-
-    .secondary-btn:hover{
-      background:#f3f4f6;
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-  <div class="container">
-
-    <h1>SLP Platform</h1>
-
-    <p>
-      Welcome to Smart Lesson Plan Platform.<br>
-      Create professional lesson plans easily.
-    </p>
-
-    <div class="btn-group">
-
-      <button class="primary-btn">
-        Get Started
-      </button>
-
-      <a href="https://wa.me/250794666702" target="_blank">
-        <button class="whatsapp-btn">
-          WhatsApp Support
-        </button>
-      </a>
-
-      <button class="secondary-btn">
-        Register
-      </button>
-
-      <button class="secondary-btn">
-        User Guide
-      </button>
-
-    </div>
-
-  </div>
-
-</body>
-
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>SLP Platform</title>
+  <title>SLP AI Platform</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
   <style>
 
@@ -150,84 +16,125 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial, sans-serif;
+      font-family:'Inter',sans-serif;
     }
 
     body{
-      background:#f5f7fb;
-      color:#222;
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* BACKGROUND GLOW */
+
+    .bg-glow{
+      position:absolute;
+      width:600px;
+      height:600px;
+      background:#4f46e5;
+      filter:blur(140px);
+      opacity:0.25;
+      top:-150px;
+      left:-150px;
+      z-index:-1;
+    }
+
+    .bg-glow2{
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:#06b6d4;
+      filter:blur(140px);
+      opacity:0.2;
+      bottom:-100px;
+      right:-100px;
+      z-index:-1;
     }
 
     /* NAVBAR */
 
     .navbar{
-      width:100%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:20px 8%;
-      background:white;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-      position:sticky;
-      top:0;
-      z-index:1000;
+      padding:25px 8%;
     }
 
     .logo{
       font-size:28px;
-      font-weight:bold;
-      color:#4f46e5;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+
+    .logo span{
+      color:#06b6d4;
     }
 
     .nav-links{
       display:flex;
-      gap:25px;
+      gap:30px;
       align-items:center;
     }
 
     .nav-links a{
       text-decoration:none;
-      color:#444;
-      font-weight:600;
+      color:#cbd5e1;
+      font-weight:500;
       transition:0.3s;
     }
 
     .nav-links a:hover{
-      color:#4f46e5;
+      color:white;
     }
 
-    /* HERO SECTION */
+    /* HERO */
 
     .hero{
       min-height:90vh;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:60px 8%;
+      padding:0 8%;
+      text-align:center;
+      position:relative;
     }
 
     .hero-content{
-      max-width:700px;
-      text-align:center;
+      max-width:900px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.1);
+      padding:10px 18px;
+      border-radius:999px;
+      margin-bottom:30px;
+      color:#94a3b8;
+      font-size:14px;
+      backdrop-filter:blur(10px);
     }
 
     .hero h1{
-      font-size:65px;
-      line-height:1.2;
-      margin-bottom:25px;
+      font-size:80px;
+      line-height:1.05;
+      margin-bottom:30px;
+      font-weight:800;
     }
 
-    .gradient-text{
+    .gradient{
       background:linear-gradient(135deg,#4f46e5,#06b6d4);
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
 
     .hero p{
-      font-size:20px;
-      color:#666;
+      font-size:22px;
       line-height:1.8;
-      margin-bottom:40px;
+      color:#94a3b8;
+      max-width:750px;
+      margin:auto;
+      margin-bottom:45px;
     }
 
     /* BUTTONS */
@@ -240,96 +147,89 @@
     }
 
     .btn{
-      padding:16px 28px;
-      border:none;
-      border-radius:14px;
-      font-size:17px;
-      font-weight:bold;
-      cursor:pointer;
-      transition:0.3s ease;
+      padding:18px 32px;
+      border-radius:16px;
       text-decoration:none;
-      display:inline-block;
+      font-weight:700;
+      font-size:17px;
+      transition:0.3s ease;
+      border:none;
+      cursor:pointer;
     }
 
     .primary-btn{
       background:linear-gradient(135deg,#4f46e5,#06b6d4);
       color:white;
-      box-shadow:0 8px 20px rgba(79,70,229,0.3);
+      box-shadow:0 10px 30px rgba(79,70,229,0.4);
     }
 
     .primary-btn:hover{
-      transform:translateY(-3px);
+      transform:translateY(-4px) scale(1.02);
     }
 
     .secondary-btn{
-      background:white;
-      border:2px solid #ddd;
-      color:#333;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.1);
+      color:white;
+      backdrop-filter:blur(12px);
     }
 
     .secondary-btn:hover{
-      background:#f3f4f6;
-    }
-
-    .whatsapp-btn{
-      background:#25D366;
-      color:white;
-    }
-
-    .whatsapp-btn:hover{
-      opacity:0.9;
+      background:rgba(255,255,255,0.12);
     }
 
     /* FEATURES */
 
     .features{
-      padding:80px 8%;
-      background:white;
+      padding:120px 8%;
     }
 
     .section-title{
       text-align:center;
-      font-size:40px;
-      margin-bottom:50px;
+      font-size:52px;
+      margin-bottom:70px;
+      font-weight:800;
     }
 
     .feature-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
     }
 
     .feature-card{
-      background:#f8fafc;
-      padding:35px;
-      border-radius:20px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:40px;
+      border-radius:28px;
+      backdrop-filter:blur(18px);
       transition:0.3s ease;
-      border:1px solid #eee;
     }
 
     .feature-card:hover{
-      transform:translateY(-5px);
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transform:translateY(-8px);
+      border-color:#06b6d4;
     }
 
     .feature-card h3{
-      margin-bottom:15px;
-      font-size:24px;
+      font-size:28px;
+      margin-bottom:20px;
     }
 
     .feature-card p{
-      color:#666;
-      line-height:1.7;
+      color:#94a3b8;
+      line-height:1.8;
+      font-size:17px;
     }
 
     /* FOOTER */
 
     footer{
       text-align:center;
-      padding:30px;
-      color:#777;
-      background:#f1f5f9;
-      margin-top:50px;
+      padding:40px;
+      color:#64748b;
+      border-top:1px solid rgba(255,255,255,0.08);
+      margin-top:80px;
     }
 
     /* MOBILE */
@@ -338,11 +238,11 @@
 
       .navbar{
         flex-direction:column;
-        gap:15px;
+        gap:20px;
       }
 
       .hero h1{
-        font-size:42px;
+        font-size:48px;
       }
 
       .hero p{
@@ -357,6 +257,10 @@
         flex-direction:column;
       }
 
+      .section-title{
+        font-size:38px;
+      }
+
     }
 
   </style>
@@ -365,12 +269,15 @@
 
 <body>
 
+  <div class="bg-glow"></div>
+  <div class="bg-glow2"></div>
+
   <!-- NAVBAR -->
 
   <div class="navbar">
 
     <div class="logo">
-      SLP Platform
+      SLP<span>AI</span>
     </div>
 
     <div class="nav-links">
@@ -382,19 +289,24 @@
 
   </div>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
 
   <section class="hero">
 
     <div class="hero-content">
 
+      <div class="badge">
+        🇷🇼 Rwanda Curriculum Powered Platform
+      </div>
+
       <h1>
-        Smart <span class="gradient-text">Lesson Plan</span> Generator
+        Create Smart <span class="gradient">Lesson Plans</span><br>
+        In Minutes
       </h1>
 
       <p>
-        Create professional lesson plans aligned with the Rwanda Curriculum.
-        Save time and generate high-quality teaching documents easily.
+        The next-generation AI platform helping teachers generate
+        professional lesson plans aligned with the Rwanda Education Board curriculum.
       </p>
 
       <div class="btn-group">
@@ -405,7 +317,7 @@
 
         <a href="https://wa.me/250794666702"
            target="_blank"
-           class="btn whatsapp-btn">
+           class="btn secondary-btn">
           WhatsApp Support
         </a>
 
@@ -428,29 +340,32 @@
   <section class="features">
 
     <h2 class="section-title">
-      Why Choose SLP Platform?
+      Why Teachers Love SLP AI
     </h2>
 
     <div class="feature-grid">
 
       <div class="feature-card">
         <h3>AI Powered</h3>
+
         <p>
-          Generate professional lesson plans quickly using smart AI technology.
+          Generate complete professional lesson plans using advanced AI technology.
         </p>
       </div>
 
       <div class="feature-card">
         <h3>REB Curriculum</h3>
+
         <p>
-          Structured according to Rwanda Education Board curriculum standards.
+          Built according to Rwanda Education Board curriculum structure and standards.
         </p>
       </div>
 
       <div class="feature-card">
-        <h3>Easy Export</h3>
+        <h3>Export & Share</h3>
+
         <p>
-          Download lesson plans in clean printable formats for teachers.
+          Download lesson plans as printable professional documents instantly.
         </p>
       </div>
 
@@ -461,7 +376,7 @@
   <!-- FOOTER -->
 
   <footer>
-    © 2026 Smart Lesson Plan Platform — All Rights Reserved
+    © 2026 SLP AI Platform — Built for Modern Teachers
   </footer>
 
 </body>
