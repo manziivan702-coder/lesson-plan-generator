@@ -81,17 +81,4 @@ button{
 
 .start-btn:hover {
   background-color: #1d4ed8;
-}.start-btn {
-  display: inline-block;
-  padding: 14px 30px;
-  background-color: #2563eb;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.start-btn:hover {
-  background-color: #1d4ed8;
 }
